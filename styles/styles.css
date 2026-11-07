@@ -1,4 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #333;
+}
+
 nav {
+    display: flex;
+    justify-content: left;
     background-color: #333;
     padding: 1rem;
 }
@@ -8,18 +22,29 @@ nav a {
     padding: 0.5rem 1rem;
     display: block;
     text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
 }
 
 main {
     max-width: 840px;
-    margin: 0 auto;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
 }
 
 h1 {
     color: #333;
+    text-align: center;
 }
 
 main img {
+    display: block;
+    margin: 1rem auto;
     width: 150px;
     height: auto;
     border: 1px solid #ccc;
@@ -29,26 +54,31 @@ main img {
 
 aside {
     width: 20rem;
-    margin: 1rem auto;
+    margin: 2rem auto;
     border: 1px solid rgb(0 0 0 / 0.2);
     padding: 1rem;
     background-color: #eee;
     color: #333;
     text-align: center;
+    border-radius: 8px;
 }
 
 aside img {
     width: 200px;
     height: auto;
+    margin-bottom: 1rem;
 }
 
 p {
     padding: 0;
+    line-height: 1.6;
 }
 
 footer {
-    margin-top: 15px;
-    border-top: 1px solid #000;
+    margin-top: 2rem;
+    border-top: 1px solid #ddd;
     text-align: center;
-    padding: 1rem;
+    padding: 1.5rem;
+    background-color: #333;
+    color: #fff;
 }
