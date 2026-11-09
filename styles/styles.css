@@ -1,7 +1,12 @@
-body {
-    font-family: Arial, sans-serif;
+/* Universal Selector Reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
     color: #333;
     background-color: #f9f9f9;
 }
@@ -43,8 +48,8 @@ h1 {
 }
 
 main img {
-    display: block;
-    margin: 1rem auto;
+    float: right;
+    margin: 0 0 1rem 1rem;
     width: 150px;
     height: auto;
     border: 1px solid #ccc;
@@ -53,12 +58,10 @@ main img {
 }
 
 aside {
+    position: relative;
+    /* Required for absolute positioning of the heading inside */
     width: 20rem;
     margin: 2rem auto;
-    border: 1px solid rgb(0 0 0 / 0.2);
-    padding: 1rem;
-    background-color: #eee;
-    color: #333;
     text-align: center;
     border-radius: 8px;
 }
@@ -67,6 +70,17 @@ aside img {
     width: 200px;
     height: auto;
     margin-bottom: 1rem;
+}
+
+/* Absolute positioning for the state/country heading overlay on the image */
+aside h2 {
+    position: absolute;
+    top: 47px;
+    left: 150px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
 }
 
 p {
@@ -81,4 +95,13 @@ footer {
     padding: 1.5rem;
     background-color: #333;
     color: #fff;
+}
+
+/* Class Selectors */
+.box {
+    margin: 1rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+    padding: 1rem;
+    background-color: #ddd;
+    color: #000;
 }
