@@ -59,7 +59,6 @@ main img {
 
 aside {
     position: relative;
-    /* Required for absolute positioning of the heading inside */
     width: 20rem;
     margin: 2rem auto;
     text-align: center;
@@ -72,7 +71,6 @@ aside img {
     margin-bottom: 1rem;
 }
 
-/* Absolute positioning for the state/country heading overlay on the image */
 aside h2 {
     position: absolute;
     top: 47px;
