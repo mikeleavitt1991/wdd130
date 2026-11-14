@@ -40,11 +40,14 @@ main {
     padding: 1rem;
     background-color: #fff;
     border-radius: 8px;
+    overflow: hidden;
+    /* Ensures main contains floated elements properly */
 }
 
 h1 {
     color: #333;
     text-align: center;
+    margin-bottom: 1rem;
 }
 
 main img {
@@ -59,7 +62,6 @@ main img {
 
 aside {
     position: relative;
-    /* Required for absolute positioning of the heading inside */
     width: 20rem;
     margin: 2rem auto;
     text-align: center;
@@ -70,25 +72,30 @@ aside img {
     width: 200px;
     height: auto;
     margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Centered absolute positioning for the state/country heading overlay on the image */
 aside h2 {
     position: absolute;
-    top: 20px;
+    top: 15px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.7);
+    width: 180px;
+    background-color: rgba(0, 0, 0, 0.75);
     color: #fff;
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 0.5rem;
     border-radius: 4px;
-    width: 85%;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    text-align: center;
 }
 
 p {
     padding: 0;
     line-height: 1.6;
+    margin-bottom: 1rem;
 }
 
 footer {
@@ -102,9 +109,16 @@ footer {
 
 /* Class Selectors */
 .box {
-    margin: 1rem;
+    clear: both;
+    /* Forces the box to sit below floated elements like the profile image */
+    margin: 1.5rem 0 0 0;
     border: 1px solid rgb(0 0 0 / 10%);
     padding: 1rem;
     background-color: #ddd;
     color: #000;
+}
+
+.box li {
+    margin-left: 1.5rem;
+    margin-bottom: 0.5rem;
 }
