@@ -7,7 +7,6 @@
     --body-font: Arial, Helvetica, sans-serif;
 }
 
-/* Fixed: changed '-' to '*' */
 * {
     margin: 0;
     padding: 0;
@@ -20,7 +19,7 @@ body {
     background-color: #f9f9f9;
 }
 
-/* Steps 2, 7, & 28: Combined rule for header, .grid, and footer */
+/* W04 Combined Rule for Header, Grid, and Footer */
 header,
 .grid,
 footer {
@@ -35,7 +34,7 @@ h2 {
     color: var(--primary-color);
 }
 
-/* Steps 8 & 9: Flexbox navigation bar */
+/* Flexbox Navigation Bar */
 nav {
     background-color: steelblue;
     padding: 1rem;
@@ -44,7 +43,6 @@ nav {
     align-items: center;
 }
 
-/* Steps 17 & 18: Navigation links styling */
 nav a {
     display: block;
     padding: 0.5rem;
@@ -52,17 +50,16 @@ nav a {
     font-size: 1.2rem;
     font-weight: 700;
     color: #fff;
-    /* shorthand for white */
 }
 
-/* Step 26: Bottom border on h1 */
+/* Heading H1 Bottom Border */
 h1 {
     border-bottom: 2px solid var(--primary-color);
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
 }
 
-/* Steps 29-44: CSS Grid layout */
+/* CSS Grid Layout for Main and Aside */
 .grid {
     display: grid;
     align-items: center;
@@ -83,7 +80,6 @@ aside {
     grid-row: 1/2;
 }
 
-/* Image handling */
 main img,
 aside img {
     max-width: 100%;
@@ -97,7 +93,6 @@ main img {
     margin: 0 0 1rem 1rem;
 }
 
-/* Class Selectors */
 .box {
     clear: both;
     margin: 1.5rem 0 0 0;
