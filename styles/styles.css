@@ -1,4 +1,13 @@
-/* Universal Selector Reset */
+:root {
+    --primary-color: #055a05;
+    --secondary-color: #f4a261;
+    --accent1-color: #264653;
+    --accent2-color: #e9c46a;
+    --heading-font: "Times New Roman", "Georgia", serif;
+    --body-font: Arial, Helvetica, sans-serif;
+}
+
+/* Fixed: changed '-' to '*' */
 * {
     margin: 0;
     padding: 0;
@@ -6,119 +15,109 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    color: #333;
+    font-family: var(--body-font);
+    color: var(--accent1-color);
     background-color: #f9f9f9;
 }
 
-header {
-    background-color: #333;
+/* Steps 2, 7, & 28: Combined rule for header, .grid, and footer */
+header,
+.grid,
+footer {
+    max-width: 840px;
+    margin: 0 auto;
+    background-color: #fff;
 }
 
+h1,
+h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+/* Steps 8 & 9: Flexbox navigation bar */
 nav {
-    display: flex;
-    justify-content: left;
-    background-color: #333;
+    background-color: steelblue;
     padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
+/* Steps 17 & 18: Navigation links styling */
 nav a {
-    color: #fff;
-    padding: 0.5rem 1rem;
     display: block;
+    padding: 0.5rem;
     text-decoration: none;
-    font-weight: bold;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    /* shorthand for white */
 }
 
-nav a:hover {
-    text-decoration: underline;
+/* Step 26: Bottom border on h1 */
+h1 {
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Steps 29-44: CSS Grid layout */
+.grid {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 20rem 1fr;
+    gap: 1rem;
+    padding: 1rem;
 }
 
 main {
-    max-width: 840px;
-    margin: 2rem auto;
-    padding: 1rem;
-    background-color: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    /* Ensures main contains floated elements properly */
+    grid-column: 2/3;
+    margin: 1rem;
 }
 
-h1 {
-    color: #333;
-    text-align: center;
-    margin-bottom: 1rem;
+aside {
+    width: 20rem;
+    position: relative;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+/* Image handling */
+main img,
+aside img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
 }
 
 main img {
     float: right;
-    margin: 0 0 1rem 1rem;
     width: 150px;
-    height: auto;
-    border: 1px solid #ccc;
-    padding: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-aside {
-    position: relative;
-    width: 20rem;
-    margin: 2rem auto;
-    text-align: center;
-    border-radius: 8px;
-}
-
-aside img {
-    width: 200px;
-    height: auto;
-    margin-bottom: 1rem;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Centered absolute positioning for the state/country heading overlay on the image */
-aside h2 {
-    position: absolute;
-    top: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 180px;
-    background-color: rgba(0, 0, 0, 0.75);
-    color: #fff;
-    padding: 0.4rem 0.5rem;
-    border-radius: 4px;
-    font-size: 1rem;
-    text-align: center;
-}
-
-p {
-    padding: 0;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-}
-
-footer {
-    margin-top: 2rem;
-    border-top: 1px solid #ddd;
-    text-align: center;
-    padding: 1.5rem;
-    background-color: #333;
-    color: #fff;
+    margin: 0 0 1rem 1rem;
 }
 
 /* Class Selectors */
 .box {
     clear: both;
-    /* Forces the box to sit below floated elements like the profile image */
     margin: 1.5rem 0 0 0;
     border: 1px solid rgb(0 0 0 / 10%);
     padding: 1rem;
-    background-color: #ddd;
-    color: #000;
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
+    border-radius: 8px;
 }
 
 .box li {
     margin-left: 1.5rem;
     margin-bottom: 0.5rem;
+}
+
+footer {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    text-align: center;
+    border-top: 1px solid var(--accent1-color);
+    background-color: #333;
+    color: #fff;
 }
