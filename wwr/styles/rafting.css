@@ -95,7 +95,7 @@ main {
     bottom: 20px;
     left: 20px;
     right: 20px;
-    background-color: rgba(244, 162, 97, 0.95);
+    background-color: var(--secondary-color);
     padding: 1rem;
     border-radius: 6px;
 }
