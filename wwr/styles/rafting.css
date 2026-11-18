@@ -22,10 +22,11 @@ body {
     color: var(--accent1-color);
 }
 
+/* Combined rule for header, .grid, and footer width/centering */
 header,
-main,
+.grid,
 footer {
-    width: 840px;
+    max-width: 840px;
     margin: 0 auto;
 }
 
@@ -47,14 +48,24 @@ article {
     text-decoration: none;
 }
 
-/* Header & Nav Layout */
-header {
+/* Flexbox Navigation Bar */
+nav {
+    background-color: steelblue;
+    padding: 1rem;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: var(--accent2-color);
-    /* Uses --accent2-color */
-    padding: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Navigation Links */
+nav a {
+    display: block;
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    /* shorthand for white */
 }
 
 header img {
@@ -62,52 +73,50 @@ header img {
     height: auto;
 }
 
-header nav ul {
-    list-style-type: disc;
-    margin-left: 20px;
+/* Heading H1 Bottom Border */
+h1 {
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
 }
 
-/* Hero Section with Overlays */
-.hero {
+/* CSS Grid Layout for Main and Aside */
+.grid {
+    display: grid;
+    align-items: center;
+}
+
+main {
+    grid-column: 2/3;
+    margin: 1rem;
+}
+
+aside {
+    width: 20rem;
     position: relative;
+    grid-column: 1/2;
+    grid-row: 1/2;
 }
 
-.hero img {
-    display: block;
+main img {
     width: 100%;
     height: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
-h1 {
-    position: absolute;
-    top: 20px;
+aside img {
     width: 100%;
-    padding: 16px;
+    height: auto;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Footer Styling */
+footer {
+    margin-top: 20px;
+    padding: 1rem;
     text-align: center;
-    opacity: 0.8;
-    background-color: var(--primary-color);
-    /* Uses --primary-color */
-    color: #fff;
-    font-family: var(--heading-font);
-}
-
-.hero article {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    background-color: var(--secondary-color);
-    /* Uses --secondary-color */
-    color: var(--accent1-color);
-    padding: 16px;
-    border-radius: 4px;
-}
-
-.hero article img {
-    float: right;
-    width: 125px;
-    margin-left: 12px;
-    border-radius: 4px;
+    border-top: 1px solid var(--accent1-color);
 }
 
 /* Footer Social Icons */
